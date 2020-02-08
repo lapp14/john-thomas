@@ -1,0 +1,16 @@
+nav {
+  background: #333;
+  color: #fff;
+}
+
+nav span.nav-title {
+  font-size: 1.8em;
+}
+
+nav ol {
+  display: inline-block;
+}
+
+nav ol ul {
+  display: inline-block;
+}
