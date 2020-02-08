@@ -33,8 +33,25 @@ nav ol ul {
 
 div.container {
   background: #000000cc;
+  color: #fff;
   padding: 1.4rem;
   margin: 0;
+}
+
+div.section {
+  padding-bottom: 2.4rem;
+}
+
+img.img-right {
+  float: right;
+}
+
+.clearfix:after { 
+  content: "."; 
+  visibility: hidden; 
+  display: block; 
+  height: 0; 
+  clear: both;
 }
 
 @media (min-width: 576px) {  }
