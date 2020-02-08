@@ -1,5 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+
+body {
+  font-family: 'Sriracha', cursive;
+  background: url('../img/bg.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 nav {
+  padding: 1rem;
   background: #333;
+  color: #fff;
+}
+
+nav a {
   color: #fff;
 }
 
@@ -13,4 +29,23 @@ nav ol {
 
 nav ol ul {
   display: inline-block;
+}
+
+div.container {
+  background: #000000cc;
+  padding: 1.4rem;
+  margin: 0;
+}
+
+@media (min-width: 576px) {  }
+
+@media (min-width: 768px) {  }
+
+@media (min-width: 992px) {  }
+
+@media (min-width: 1200px) { 
+  div.container {
+    margin: 0 auto;
+    max-width: 800px;  
+  }
 }
