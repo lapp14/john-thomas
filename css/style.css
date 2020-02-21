@@ -1,7 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400&display=swap');
 
+html {
+  font-size: 1.1em;
+}
 body {
-  font-family: 'Sriracha', cursive;
+  font-weight: 200;
+  font-family: 'Source Sans Pro';
   background: url('../img/bg.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -10,9 +14,15 @@ body {
 }
 
 nav {
-  padding: 1rem;
+  padding: 0;
   background: #222;
   color: #fff;
+}
+
+nav img.logo {
+  width: 7rem;
+  padding: 0;
+  margin: 0;
 }
 
 nav a {
@@ -24,34 +34,45 @@ nav span.nav-title {
 }
 
 nav ol {
-  display: inline-block;
+  margin: 1.5rem;
+  padding: 1rem;
+  float: right;
 }
 
 nav ol ul {
   display: inline-block;
 }
 
+h1 { 
+  font-weight: 400;
+}
+
 div.container {
   background: #000000cc;
   color: #fff;
   padding: 1.4rem;
+  font-size: 1.4rem;
   margin: 0;
 }
 
 div.section {
-  padding-bottom: 2.4rem;
+  border: 1px solid teal;
+  display: flex;
+  flex-direction: flow;
+  flex-wrap: wrap;
 }
 
-img.img-right {
-  float: right;
+div.section h1 {
+  flex: 0 0 100%;
 }
 
-.clearfix:after { 
-  content: "."; 
-  visibility: hidden; 
-  display: block; 
-  height: 0; 
-  clear: both;
+div.panel {
+  border: 1px solid red;
+  font-size: 1.5rem;
+}
+
+div.panel.content-center {
+  text-align: center;
 }
 
 @media (min-width: 576px) {  }
@@ -64,5 +85,28 @@ img.img-right {
   div.container {
     margin: 0 auto;
     max-width: 800px;  
+  }
+
+  div.panel.main-content {
+    flex-grow: 2;
+    padding: 0.2rem;
+  }
+
+  div.panel.main-content p {
+    padding: 0.2rem;
+  }
+
+  img.album-cover {
+    height: 300px;
+    width: 300px;
+  }
+  
+  img.polaroid {
+    width: 180px;
+  }
+
+  img.icon-social {
+    width: 80px;
+    padding: 1rem;
   }
 }
