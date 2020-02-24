@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400&display=swap');
 
 html {
-  font-size: 1.1em;
+  font-size: 1.4em;
 }
 body {
   font-weight: 200;
@@ -13,6 +13,15 @@ body {
   background-size: cover;
 }
 
+a {
+  text-decoration: none;
+}
+
+p.side-note {
+  font-size: 1rem;
+  font-style: italic;
+}
+
 nav {
   padding: 0;
   background: #222;
@@ -20,13 +29,14 @@ nav {
 }
 
 nav img.logo {
-  width: 7rem;
+  width: 5rem;
   padding: 0;
   margin: 0;
 }
 
 nav a {
   color: #fff;
+  text-decoration: none;
 }
 
 nav span.nav-title {
@@ -34,7 +44,7 @@ nav span.nav-title {
 }
 
 nav ol {
-  margin: 1.5rem;
+  margin: 1rem;
   padding: 1rem;
   float: right;
 }
@@ -43,37 +53,107 @@ nav ol ul {
   display: inline-block;
 }
 
-h1 { 
-  font-weight: 400;
+h1 {
+  font-weight: 100;
 }
 
 div.container {
   background: #000000cc;
   color: #fff;
-  padding: 1.4rem;
+  padding: 0;
   font-size: 1.4rem;
   margin: 0;
 }
 
 div.section {
-  border: 1px solid teal;
+  padding: 0 1rem;
+  text-align: center;
   display: flex;
   flex-direction: flow;
   flex-wrap: wrap;
 }
 
-div.section h1 {
-  flex: 0 0 100%;
-}
-
 div.panel {
-  border: 1px solid red;
   font-size: 1.5rem;
 }
 
-div.panel.content-center {
+.bg-black {
+  background: #000;
+}
+
+
+.bg-grey {
+  background: #222;
+}
+
+div.panel-full {
+  width: 100%;
+}
+
+img.album-cover {
+  height: 300px;
+  width: 300px;
+}
+
+img.polaroid {
+  width: 180px;
+}
+
+img.icon-social {
+  width: 100px;
+  padding: 0.5rem 1rem;
+}
+
+/* shows */
+div.section#shows {
+  flex-wrap: wrap !important;
+}
+
+div#official-shows div.show {
+  display: flex;
+  flex-direction: flow;
+  border: 1px solid #fff;
+  margin-bottom: 0.5rem;
+}
+
+div#official-shows div.show div.show-date {
+  padding: 1rem;
+  background: #fff;
+  color: #000;
+  font-weight: 800;
   text-align: center;
 }
+
+div#official-shows div.show div.show-info {
+  padding: 1rem;
+}
+
+div#official-shows div.show div.show-info span {
+  display: block;
+}
+
+div.show div.show-info span.show-venue {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+div.show div.show-info span.show-title {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+div.show-info span.show-time, div.show-info span.show-price, div.show-info span.show-notes {
+  text-align: center;
+}
+
+div.show-info span.show-price {
+  font-size: 1.2rem;
+}
+
+div.show-info span.show-notes {
+  font-size: 1rem;
+}
+/*********/
 
 @media (min-width: 576px) {  }
 
@@ -82,9 +162,20 @@ div.panel.content-center {
 @media (min-width: 992px) {  }
 
 @media (min-width: 1200px) { 
+  h1 {
+    margin: 0;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    line-height: 3rem;
+  }
+
   div.container {
     margin: 0 auto;
-    max-width: 800px;  
+    max-width: 900px;  
+  }
+
+  div.section {
+    flex-wrap: nowrap;
   }
 
   div.panel.main-content {
@@ -107,6 +198,22 @@ div.panel.content-center {
 
   img.icon-social {
     width: 80px;
-    padding: 1rem;
+    padding: 0.5rem 1rem;
   }
+
+  #official-shows {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  /* shows */
+  div#official-shows div.show div.show-date {
+  }
+
+  div#official-shows div.show div.show-info {
+    flex-grow: 4;
+  }
+
+
+  /*********/
 }

@@ -1,14 +1,20 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 <head>
-  <meta charset="utf-8">
-  <title></title>
-  <meta name="description" content="">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>John Thomas - Official Band Website</title>
+  <meta name="description" content="Infamous rock band from Hamilton, Ontario. Check out our music and list of live shows.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="img/ms-icon-150x150.png">
+  <meta name="theme-color" content="#77b342">
+
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" sizes="192x192" href="img/john-thomas-icon-192.png">
+  <link rel="apple-touch-icon" href="img/john-thomas-icon-192.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -30,8 +36,8 @@
   </nav>
 
   <div class="container">
+    <h1>Music</h1>
     <div class="section" id="music">
-      <h1>Music</h1>
       <div id="music" class="panel main-content content-center">
         <p>
           New album <em>Plastic</em> available everywhere
@@ -61,20 +67,39 @@
        </div>
     </div>
     
-    <div class="section" id="social">
-      <div class="panel">
+    <div class="section bg-black" id="social">
+      <div class="panel panel-full">
         <p>Smash that subscribe button.</p>
+        <p>
+          <a href="https://www.youtube.com/channel/UCydAIKgAtI5GzfUXrms4MyQ">
+            <img class="icon-social"
+              src="img/social/social-1_round-youtube.svg" />
+          </a>
+          <a href="https://www.instagram.com/johnthomastheband/">
+            <img class="icon-social"
+              src="img/social/instagram.png" />
+          </a>
+          <a href="#">
+            <img class="icon-social"
+              src="img/social/social-1_logo-facebook.svg" />
+          </a>
+          <a href="https://twitter.com/JohnThomasBand">
+            <img class="icon-social"
+              src="img/social/social-1_logo-twitter.svg" />
+          </a>
+        </p>
       </div>    
     </div>
 
     <div class="section" id="shows">
-      <div class="panel">
-        <p>Come watch us play music live!</p>
+      <div class="panel panel-full">  
+        <p>Come watch us play music live!</p> 
       </div>
+      <div id="official-shows"></div>
     </div>
 
-    <div class="section" id="story">
-      <h1>Story</h1>
+    <h1 class="bg-grey">Our Story</h1>
+    <div class="section bg-grey" id="story">
       <div class="panel">
         <p>
           <img class="polaroid" 
@@ -83,10 +108,24 @@
         </p>
       </div>
       <div class="panel main-content content-center">
-        These two idiots started this band
+        <p>These two idiots started this band<strong>*</strong></p>
+        <p class="side-note">
+          <strong>* Note:</strong> John Thomas is a rock band from Hamilton, Ontario. Started by Julian Finbow and Dan Lapp, they just try and make loud noises that people like to hear. All rights reserved. Patent pending.
+        </p>
       </div>
     </div>
   </div>
+
+  <script src="../official-shows/official-shows.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>   
+    window.onload = function() {
+      var url = 'https://raw.githubusercontent.com/lapp14/official-shows/master/john-thomas.json';
+      if (window.jQuery) {
+        Shows.loadShows(url);
+      }
+    }
+  </script>
 
   <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
   <script>
