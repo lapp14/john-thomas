@@ -91,24 +91,23 @@ nav {
 }
 
 nav .menu-content {
+  transition: max-height 0.1s ease-out;
   max-height: 0;
   overflow: hidden;
 }
 
 nav input:checked ~ .menu-content {
-  max-height: 100%;
-}
-
-nav input:checked + label {
-  background-image: url();
+  transition: max-height 0.4s ease-in;
+  max-height: 800px;
 }
 
 nav input:checked ~ label {
-  background-image: url();
+  background: #3c3c3c;
 }
 
 nav label.menu-toggle {
   cursor: pointer;
+  font-size: 1.6rem;
 }
 
 input#menu {
@@ -130,7 +129,7 @@ nav .collapsable-menu .menu-toggle {
   width: fit-content;
   margin: 1rem;
   margin-left: auto;
-  padding: 0.2rem;
+  padding: 0.2rem 0.5rem;
 }
 
 nav a {
@@ -212,6 +211,7 @@ div.section#shows {
 
 #official-shows {
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 div#official-shows div.show {
