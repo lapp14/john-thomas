@@ -29,10 +29,9 @@ var Shows = (function() {
 
   this.fetchComplete = function(json) {
     $('#official-shows__loading').hide();
-
     // TODO: trim past shows out of json
-    if ($(json).length < 1) {
-      if ($('#official-shows__no-shows').length) {
+    if (typeof json === 'object' && Object.keys(json).length === 0) {
+      if ($("#official-shows__no-shows").length) {
         $('#official-shows__no-shows').show();
       } else {
         $('#official-shows').text(self.defaultNoShowsMessage);
