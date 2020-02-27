@@ -245,7 +245,6 @@ div#contact .panel a {
 }
 
 @media (min-width: 576px) { 
-  p {color: red !important} 
   img.icon-social {
     width: 70px;
     padding: 0.5rem 1rem;
@@ -258,7 +257,6 @@ div#contact .panel a {
 }
 
 @media (min-width: 768px) { 
-  p {color: lime !important}
   nav img.logo {
     width: 5rem;
     height: 5rem;
@@ -333,7 +331,6 @@ div#contact .panel a {
 }
 
 @media (min-width: 992px) { 
-  p {color: teal !important}
   html {
     font-size: 1.4em;
   }
@@ -344,8 +341,6 @@ div#contact .panel a {
 }
 
 @media (min-width: 1200px) { 
-  p {color: yellowgreen !important}
-
   img.album-cover {
     height: 300px;
     width: 300px;
