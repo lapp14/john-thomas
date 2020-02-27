@@ -29,14 +29,14 @@
 
     <div class="collapsable-menu">
       <input type="checkbox" id="menu">
-      <label for="menu">Menu</label>
+      <label for="menu" class="menu-toggle">Menu</label>
       <div class="menu-content">
         <ol>        
-          <ul><a href="#music">Music</a></ul>
-          <ul><a href="#shows">Shows</a></ul>
-          <ul><a href="#social">Social</a></ul>
-          <ul><a href="#story">Story</a></ul>
-          <ul><a href="contact/">Contact</a></ul>
+          <li><a href="#music">Music</a></li>
+          <li><a href="#shows">Shows</a></li>
+          <li><a href="#social">Social</a></ul>
+          <li><a href="#story">Story</a></ul>
+          <li><a href="contact/">Contact</a></ul>
         </ol>
       </div>
     </div>
@@ -48,9 +48,9 @@
     <div class="section" id="music">
       <div id="music" class="panel main-content content-center">
         <p>
-          New album <em>Plastic</em> available everywhere
+          New album <em class="album-title">Plastic</em> available everywhere
         </p>
-        <p>
+        <p class="side-note">
           2020 - 03 - 01 @ 12:02 am
         </p>
         <p>
@@ -79,19 +79,19 @@
       <div class="panel panel-full">
         <p>Smash that subscribe button.</p>
         <p>
-          <a href="https://www.youtube.com/channel/UCydAIKgAtI5GzfUXrms4MyQ">
+          <a href="https://www.youtube.com/channel/UCydAIKgAtI5GzfUXrms4MyQ" target="_blank">
             <img class="icon-social"
               src="img/social/social-1_round-youtube.svg" />
           </a>
-          <a href="https://www.instagram.com/johnthomastheband/">
+          <a href="https://www.instagram.com/johnthomastheband/" target="_blank">
             <img class="icon-social"
               src="img/social/instagram.png" />
           </a>
-          <a href="#">
+          <a href="#" target="_blank">
             <img class="icon-social"
               src="img/social/social-1_logo-facebook.svg" />
           </a>
-          <a href="https://twitter.com/JohnThomasBand">
+          <a href="https://twitter.com/JohnThomasBand" target="_blank">
             <img class="icon-social"
               src="img/social/social-1_logo-twitter.svg" />
           </a>
@@ -111,7 +111,7 @@
       <div class="panel">
         <p>
           <img class="polaroid" 
-          src="img/polaroid.jpg" 
+          src="img/polaroid-tilt.png" 
           alt="Dan and Julian at the wedding" />
         </p>
       </div>
@@ -135,11 +135,14 @@
     }
   </script>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P5GFPY8Z9V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P5GFPY8Z9V');
+</script>
 </body>
 </html>

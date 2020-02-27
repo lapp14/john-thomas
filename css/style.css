@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
 
 html {
   font-size: 1.4em;
@@ -30,6 +31,12 @@ p.side-note {
   font-style: italic;
 }
 
+em.album-title {
+  font-family: 'Lacquer', 'Source Sans Pro';
+  font-size: 1.8rem;
+  color: lime;
+}
+
 nav {
   display: flex;
   flex-wrap: nowrap;
@@ -55,9 +62,8 @@ nav input:checked ~ label {
   background-image: url();
 }
 
-nav input label {
-  
-  cursor: context-menu;
+nav label.menu-toggle {
+  cursor: pointer;
 }
 
 input#menu {
@@ -70,6 +76,15 @@ nav img.logo {
   vertical-align: top;
   padding: 0;
   margin: 0;
+}
+
+nav .collapsable-menu {
+  flex-grow: 3;
+  display: flex;
+}
+
+nav .collapsable-menu .menu-content {
+  margin-left: auto;
 }
 
 nav a {
@@ -87,10 +102,14 @@ nav ol {
   padding: 1rem;  
 }
 
-nav ol ul {
+nav ol li {
   display: block;
   padding: 1rem;
   text-align: right;
+  -webkit-transition:max-height 500ms ease;
+  -moz-transition:max-height 500ms ease;
+  -o-transition:max-height 500ms ease;
+  transition:max-height 500ms ease;
 }
 
 div.container {
@@ -136,7 +155,7 @@ img.polaroid {
 }
 
 img.icon-social {
-  width: 100px;
+  width: 50px;
   padding: 0.5rem 1rem;
 }
 
@@ -192,15 +211,27 @@ div.show-info span.show-notes {
 /*********/
 
 @media (min-width: 576px) {  
-  h1 {color: red;}
+  img.icon-social {
+    width: 70px;
+    padding: 0.5rem 1rem;
+  }
 }
 
 @media (min-width: 768px) { 
+  
   nav img.logo {
     width: 5rem;
     height: 5rem;
   }
   
+  nav .menu-content {
+    max-height: 100%;
+  }
+
+  nav label.menu-toggle {
+    display: none;
+  }
+
   nav a {
     text-decoration: none;
   }
@@ -212,7 +243,7 @@ div.show-info span.show-notes {
   nav ol {
   }
   
-  nav ol ul {
+  nav ol li {
     display: inline-block;
   }
 }
