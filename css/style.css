@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lacquer&display=swap');
 
 html {
-  font-size: 1.4em;
+  font-size: 1.2em;
 }
 body {
   font-weight: 200;
@@ -145,7 +145,6 @@ div.panel {
   background: #000;
 }
 
-
 .bg-grey {
   background: #222;
 }
@@ -160,6 +159,7 @@ img.album-cover {
 }
 
 img.polaroid {
+  float: left;
   width: 180px;
 }
 
@@ -171,6 +171,10 @@ img.icon-social {
 /* shows */
 div.section#shows {
   flex-wrap: wrap !important;
+}
+
+#official-shows {
+  width: 100%;
 }
 
 div#official-shows div.show {
@@ -186,10 +190,12 @@ div#official-shows div.show div.show-date {
   color: #000;
   font-weight: 800;
   text-align: center;
+  font-size: 1.2rem;
 }
 
 div#official-shows div.show div.show-info {
   padding: 1rem;
+  flex-grow: 4;
 }
 
 div#official-shows div.show div.show-info span {
@@ -197,12 +203,24 @@ div#official-shows div.show div.show-info span {
 }
 
 div.show div.show-info span.show-venue {
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 400;
 }
 
-div.show div.show-info span.show-title {
+div.show-info span.show-price {
+  font-size: 1.2rem;
+}
+
+div.show-info span.show-time {
   font-size: 1rem;
+}
+
+div.show-info span.show-notes {
+  font-size: 0.8rem;
+}
+
+div.show div.show-info span.show-title {
+  font-size: 0.8rem;
   margin-bottom: 1rem;
 }
 
@@ -210,24 +228,37 @@ div.show-info span.show-time, div.show-info span.show-price, div.show-info span.
   text-align: center;
 }
 
-div.show-info span.show-price {
-  font-size: 1.2rem;
-}
 
-div.show-info span.show-notes {
-  font-size: 1rem;
-}
 /*********/
 
-@media (min-width: 576px) {  
+div#contact .panel {
+  font-size: 1.3rem;
+}
+
+div#contact .panel p.contact {
+  font-size: 1.1rem;
+  font-style: italic;
+}
+
+div#contact .panel a {
+  color: lime;
+}
+
+@media (min-width: 576px) { 
+  p {color: red !important} 
   img.icon-social {
     width: 70px;
     padding: 0.5rem 1rem;
   }
+
+  #official-shows {
+    width: 500px;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 768px) { 
-  
+  p {color: lime !important}
   nav img.logo {
     width: 5rem;
     height: 5rem;
@@ -255,25 +286,11 @@ div.show-info span.show-notes {
   nav ol li {
     display: inline-block;
   }
-}
-
-@media (min-width: 992px) { 
-  div.container {
-    margin: 0 auto;
-    max-width: 850px;  
-  }
-}
-
-@media (min-width: 1200px) { 
-  div.container {
-    margin: 0 auto;
-    max-width: 900px;  
-  }
 
   div.section {
     flex-wrap: nowrap;
   }
-
+  
   div.panel.main-content {
     flex-grow: 2;
     padding: 0.2rem;
@@ -282,6 +299,52 @@ div.show-info span.show-notes {
   div.panel.main-content p {
     padding: 0.2rem;
   }
+
+  #official-shows {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  div.show div.show-info span.show-venue {
+    font-size: 2rem;
+  }
+  
+  div.show-info span.show-price {
+    font-size: 1.2rem;
+  }
+  
+  div.show-info span.show-time {
+    font-size: 1.4rem;
+  }
+  
+  div.show-info span.show-notes {
+    font-size: 1rem;
+  }
+  
+  div.show div.show-info span.show-title {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 991px) {
+  div.panel {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) { 
+  p {color: teal !important}
+  html {
+    font-size: 1.4em;
+  }
+  div.container {
+    margin: 0 auto;
+    max-width: 900px;  
+  }
+}
+
+@media (min-width: 1200px) { 
+  p {color: yellowgreen !important}
 
   img.album-cover {
     height: 300px;
@@ -296,20 +359,4 @@ div.show-info span.show-notes {
     width: 80px;
     padding: 0.5rem 1rem;
   }
-
-  #official-shows {
-    width: 600px;
-    margin: 0 auto;
-  }
-
-  /* shows */
-  div#official-shows div.show div.show-date {
-  }
-
-  div#official-shows div.show div.show-info {
-    flex-grow: 4;
-  }
-
-
-  /*********/
 }
