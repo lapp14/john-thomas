@@ -37,6 +37,14 @@ em.album-title {
   color: lime;
 }
 
+nav img.logo {
+  width: 4rem;
+  height: 4rem;
+  vertical-align: top;
+  padding: 0;
+  margin: 0;
+}
+
 nav {
   display: flex;
   flex-wrap: nowrap;
@@ -70,21 +78,22 @@ input#menu {
   display: none;
 }
 
-nav img.logo {
-  width: 4rem;
-  height: 4rem;
-  vertical-align: top;
-  padding: 0;
-  margin: 0;
-}
-
 nav .collapsable-menu {
   flex-grow: 3;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 nav .collapsable-menu .menu-content {
   margin-left: auto;
+}
+
+nav .collapsable-menu .menu-toggle {
+  width: fit-content;
+  margin: 1rem;
+  margin-left: auto;
+  padding: 0.2rem;
 }
 
 nav a {
