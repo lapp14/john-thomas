@@ -2,6 +2,7 @@ var Shows = (function() {
   var self = this;
   this.showsLoaded = false;
   this.showsLoading = false;
+  this.defaultNoShowsMessage = 'There are currently no upcoming shows booked. Check back soon!';
 
   this.getMonth = function(monthNumber) {
     var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -27,9 +28,15 @@ var Shows = (function() {
   }
 
   this.fetchComplete = function(json) {
+    $('#official-shows__loading').hide();
+
     // TODO: trim past shows out of json
     if ($(json).length < 1) {
-      $('#official-shows').html('<div class="alert"><p>Management is trying to book us some shows</p><p>They haven\'t gotten back to us yet...</p></div>');  
+      if ($('#official-shows__no-shows').length) {
+        $('#official-shows__no-shows').show();
+      } else {
+        $('#official-shows').text(self.defaultNoShowsMessage);
+      }      
       return;
     }
 
@@ -67,7 +74,7 @@ var Shows = (function() {
   this.fetchError = function(jqxhr, textStatus, error) {
     var err = textStatus + ', ' + error;
     console.log( 'Request Failed: ' + err );
-    $('#official-shows').html(err);
+    $('#official-shows').hide();
   }
 
   return {
