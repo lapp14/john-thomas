@@ -26,13 +26,21 @@
   <![endif]-->
   <nav>
     <img src="img/logo.png" class="logo" />
-    <ol>
-      <ul><a href="#music">Music</a></ul>
-      <ul><a href="#shows">Shows</a></ul>
-      <ul><a href="#social">Social</a></ul>
-      <ul><a href="#story">Story</a></ul>
-      <ul><a href="contact/">Contact</a></ul>
-    </ol>
+
+    <div class="collapsable-menu">
+      <input type="checkbox" id="menu">
+      <label for="menu">Menu</label>
+      <div class="menu-content">
+        <ol>        
+          <ul><a href="#music">Music</a></ul>
+          <ul><a href="#shows">Shows</a></ul>
+          <ul><a href="#social">Social</a></ul>
+          <ul><a href="#story">Story</a></ul>
+          <ul><a href="contact/">Contact</a></ul>
+        </ol>
+      </div>
+    </div>
+  
   </nav>
 
   <div class="container">
@@ -116,7 +124,7 @@
     </div>
   </div>
 
-  <script src="../official-shows/official-shows.js"></script>
+  <script src="js/official-shows.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script>   
     window.onload = function() {
