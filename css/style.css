@@ -204,6 +204,16 @@ img.icon-social {
   padding: 0.5rem 1rem;
 }
 
+div.embed-youtube {
+  display: block;
+  padding: 1rem;
+}
+
+div.embed-youtube iframe {
+  width: 364px;
+  height: 205px;
+}
+
 /* shows */
 div.section#shows {
   flex-wrap: wrap !important;
@@ -367,7 +377,13 @@ div#contact .panel a {
     font-size: 1rem;
     margin-bottom: 1rem;
   }
+
+  div.embed-youtube iframe {
+    width: 448px;
+    height: 252px;
+  }
 }
+
 @media (max-width: 991px) {
   div.panel {
     width: 100%;
@@ -378,9 +394,15 @@ div#contact .panel a {
   html {
     font-size: 1.4em;
   }
+
   div.container {
     margin: 0 auto;
     max-width: 900px;  
+  }
+
+  div.embed-youtube iframe {
+    width: 560px;
+    height: 315px;
   }
 }
 
