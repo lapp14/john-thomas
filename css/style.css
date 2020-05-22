@@ -68,6 +68,10 @@ p.side-note {
   font-style: italic;
 }
 
+p.note-small {
+  font-size: 1rem;
+}
+
 em.album-title {
   font-family: 'Lacquer', 'Source Sans Pro';
   font-size: 1.8rem;
@@ -175,6 +179,11 @@ div.section {
 
 div.panel {
   font-size: 1.5rem;
+  padding: 0.2rem;
+}
+
+div.panel-first {
+  padding-top: 1rem;
 }
 
 .bg-black {
@@ -194,6 +203,11 @@ img.album-cover {
   width: 300px;
 }
 
+img.album-cover-sm {
+  height: 220px;
+  width: 220px;
+}
+
 img.polaroid {
   float: left;
   width: 180px;
@@ -202,6 +216,10 @@ img.polaroid {
 img.icon-social {
   width: 50px;
   padding: 0.5rem 1rem;
+}
+
+img.icon-social-sm {
+  width: 45px;
 }
 
 div.embed-youtube {
@@ -302,6 +320,10 @@ div#contact .panel a {
   img.icon-social {
     width: 70px;
     padding: 0.5rem 1rem;
+  }
+
+  img.icon-social-sm {
+    width: 50px;
   }
 
   #official-shows {
@@ -419,5 +441,9 @@ div#contact .panel a {
   img.icon-social {
     width: 80px;
     padding: 0.5rem 1rem;
+  }
+
+  img.icon-social-sm {
+    width: 60px;
   }
 }
