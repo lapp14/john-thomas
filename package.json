@@ -1,0 +1,39 @@
+{
+  "name": "john-thomas",
+  "version": "1.0.0",
+  "description": "Infamous rock band from Hamilton Ontario, johnthomastheband",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "node scripts/deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lapp14/john-thomas.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lapp14/john-thomas/issues"
+  },
+  "homepage": "https://github.com/lapp14/john-thomas#readme",
+  "assets": [
+    "favicon.ico",
+    "index.html",
+    "manifest.json",
+    "contact/",
+    "css/",
+    "img/",
+    "img/album/",
+    "img/social/",
+    "js/"
+  ],
+  "cloudfrontDistributionId": "E1HRO3ARKBDYQI",
+  "deploymentTitle": "john-thomas",
+  "s3Bucket": "johnthomastheband-website",
+  "dependencies": {
+    "aws-sdk": "^2.686.0",
+    "fs": "0.0.1-security",
+    "mime-types": "^2.1.27"
+  }
+}
