@@ -162,6 +162,7 @@ nav ol li {
 }
 
 div.container {
+  background: #3b3b3b; /* IE 11 */
   background: #000000cc;
   color: #fff;
   padding: 0;
