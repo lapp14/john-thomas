@@ -6,10 +6,8 @@ on:
             master
 
 jobs:
-  build:
-
+  deploy:
     runs-on: ubuntu-latest
-    on: master
     strategy:
         matrix:
           node-version: 14.15.1
