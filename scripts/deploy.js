@@ -10,15 +10,17 @@ const mime = require('mime-types')
 process.env.AWS_ACCESS_KEY_ID = CONFIG.awsAccessKey;
 process.env.AWS_SECRET_ACCESS_KEY = CONFIG.awsSecretKey;
 
-const BASEPATH = path.join(__dirname, '../');
+const BASEPATH = path.join(__dirname, '../dist');
+
+const getAssetPath = (filepath) => `dist/${filepath}`;
 
 const getAssets = async () => {
     const assetsList = [];
     await Promise.all(assets.map(async (filepath) => {
-        if (fs.lstatSync(filepath).isDirectory()) {
-            const paths = fs.readdirSync(filepath);
+        if (fs.lstatSync(getAssetPath(filepath)).isDirectory()) {
+            const paths = fs.readdirSync(getAssetPath(filepath));
             paths.forEach(file => {
-                const contentType = mime.lookup(path.join(BASEPATH, filepath, file))
+                const contentType = mime.lookup(path.join(BASEPATH, getAssetPath(filepath), file))
                 if (contentType) {
                     assetsList.push({
                         source: path.join(BASEPATH, filepath, file),
@@ -28,7 +30,7 @@ const getAssets = async () => {
                 }
             });
         } else {
-            const contentType = mime.lookup(path.join(BASEPATH, filepath))
+            const contentType = mime.lookup(path.join(BASEPATH, getAssetPath(filepath)))
             if (contentType) {
                 assetsList.push({
                     source: path.join(BASEPATH, filepath),
