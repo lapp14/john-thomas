@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "node scripts/deploy.js"
+    "build": "node scripts/build.js",
+    "deploy": "node scripts/build.js && node scripts/deploy.js",
+    "serve": "npx http-server src -p 8889"
   },
   "repository": {
     "type": "git",
@@ -19,15 +21,15 @@
   },
   "homepage": "https://github.com/lapp14/john-thomas#readme",
   "assets": [
-    "favicon.ico",
-    "index.html",
-    "manifest.json",
-    "contact/",
-    "css/",
-    "img/",
-    "img/album/",
-    "img/social/",
-    "js/"
+    "dist/favicon.ico",
+    "dist/index.html",
+    "dist/manifest.json",
+    "dist/contact/",
+    "dist/css/",
+    "dist/img/",
+    "dist/img/album/",
+    "dist/img/social/",
+    "dist/js/"
   ],
   "cloudfrontDistributionId": "E1HRO3ARKBDYQI",
   "deploymentTitle": "john-thomas",
@@ -37,5 +39,7 @@
     "fs": "0.0.1-security",
     "mime-types": "^2.1.27"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "fs-extra": "^9.0.1"
+  }
 }

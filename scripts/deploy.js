@@ -25,9 +25,9 @@ const getAssets = async () => {
                         destination: pathReplace(path.join(filepath, file)),
                         contentType
                     });
-                }                
+                }
             });
-        } else { 
+        } else {
             const contentType = mime.lookup(path.join(BASEPATH, filepath))
             if (contentType) {
                 assetsList.push({
@@ -36,7 +36,7 @@ const getAssets = async () => {
                     contentType
                 });
             }
-                
+
         }
     }));
     return assetsList;
@@ -63,7 +63,7 @@ const uploadFile = async (source, destination, contentType) => {
     }).promise();
 };
 
-const uploadAll = async () => {  
+const uploadAll = async () => {
     const assets = await getAssets();
     await Promise.all(assets.map(asset => uploadFile(asset.source, asset.destination, asset.contentType)))
 };
@@ -84,12 +84,12 @@ const cloudfrontCacheInvalidation = async () => {
 const deploy = async () => {
     console.log(`Deplying to S3 bucket: ${s3Bucket}`);
     console.log('....................')
-    console.log('Uploading assets...') ;
+    console.log('Uploading assets...');
     console.log(`- Project basepath: ${BASEPATH}`);
     await uploadAll();
     console.log('Creating invalidation...');
-    console.log(`- Cloudfront distribution: ${cloudfrontDistributionId}`);    
-    const invalidation = await cloudfrontCacheInvalidation();        
+    console.log(`- Cloudfront distribution: ${cloudfrontDistributionId}`);
+    const invalidation = await cloudfrontCacheInvalidation();
     console.log(`- Invalidation ID: ${invalidation.Invalidation.Id}`);
 };
 

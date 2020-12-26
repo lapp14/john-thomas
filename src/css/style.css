@@ -55,12 +55,21 @@ a {
   text-decoration: none;
 }
 
-h1 {
+h1, h2, h3 {
   margin: 0;
+  font-weight: 100;
+}
+
+h1 {
   padding-top: 1rem;
   padding-left: 1rem;
   line-height: 3rem;
-  font-weight: 100;
+} 
+
+h3 {
+  margin-top: 2rem;
+  font-weight: 300;
+  line-height: 1rem;
 }
 
 p.side-note {
@@ -161,6 +170,13 @@ nav ol li {
   transition:max-height 500ms ease;
 }
 
+pre {
+  font-size: 0.7rem;
+  background: #222;
+  padding: 0.6rem;
+  color: #77b342;
+}
+
 div.container {
   background: #3b3b3b; /* IE 11 */
   background: #000000cc;
@@ -171,11 +187,16 @@ div.container {
 }
 
 div.section {
-  padding: 0 1rem;
+  padding: 1rem;
   text-align: center;
   display: flex;
   flex-direction: flow;
   flex-wrap: wrap;
+}
+
+div.section.section-left {
+
+  text-align: left;
 }
 
 div.panel {
@@ -232,6 +253,41 @@ div.embed-youtube iframe {
   width: 300px;
   height: 185px;
 }
+
+div.lyric-album {
+
+} 
+
+div.lyric-album img {
+  display: inline-block;
+  vertical-align: top;
+  width: 180px;
+} 
+
+div.lyric-album__content {
+  display: inline-block;
+}
+
+div.lyric-album ol {
+  font-size: 1rem;
+  margin-top: 0.6rem;
+  padding: 0 1.5rem;
+  list-style-type: decimal-leading-zero;
+} 
+
+div.lyric-album ol a {
+  color: lime
+}
+
+.lyrics-album__content-header {
+  display: block;
+}
+
+.lyrics-album__content-date {
+  font-size: 0.75rem;
+  display: block;
+}
+
 
 /* shows */
 div.section#shows {

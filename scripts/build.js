@@ -1,7 +1,16 @@
 
-const fs = require('fs');
+const fs = require('fs-extra');
 const DIST_DIR = 'dist/';
 
+// Remove dist directory if needed, then remake
 fs.rmdirSync(DIST_DIR, { recursive: true });
+fs.mkdirSync(DIST_DIR);
 
-// fs.copyFileSync('src/*', )
+// Copy source directory
+fs.copy('src/', DIST_DIR, function (err) {
+    if (err) {
+        console.error(err);
+    } else {
+        console.log("success!");
+    }
+});
