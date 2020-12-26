@@ -35,5 +35,6 @@
     "aws-sdk": "^2.686.0",
     "fs": "0.0.1-security",
     "mime-types": "^2.1.27"
-  }
+  },
+  "devDependencies": {}
 }
