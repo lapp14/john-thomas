@@ -13,6 +13,7 @@
   },
   "author": "",
   "license": "ISC",
+  "private": true,
   "bugs": {
     "url": "https://github.com/lapp14/john-thomas/issues"
   },
