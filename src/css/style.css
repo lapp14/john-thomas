@@ -70,7 +70,7 @@ h3 {
   margin-top: 1rem;
   padding-top: 1rem;
   font-weight: 300;
-  line-height: 1rem;
+  line-height: 1.75rem;
 }
 
 p.side-note {
@@ -176,6 +176,8 @@ pre {
   background: #222;
   padding: 0.6rem;
   color: #77b342;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 div.container {
