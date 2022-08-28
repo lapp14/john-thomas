@@ -1,5 +1,5 @@
 # John Thomas
-We are [johnthomastheband](johnthomastheband.com)
+We are [johnthomastheband](https://johnthomastheband.com)
 
 ## Building site
 
